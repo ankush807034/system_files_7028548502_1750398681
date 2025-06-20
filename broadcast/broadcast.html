@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Broadcast Panel</title>
+  <style>
+    body {
+      background: linear-gradient(to top right, #7159d9, #a35ce7);
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      color: white;
+      padding: 40px 20px;
+    }
+    h1 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    p {
+      font-size: 18px;
+      margin: 10px 0 20px;
+    }
+    h2 {
+      font-size: 18px;
+      margin: 20px 0 10px;
+    }
+    form {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      max-width: 400px;
+      margin: auto;
+    }
+    textarea {
+      width: 100%;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      resize: none;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    input[type="file"] {
+      margin-top: 10px;
+      font-size: 15px;
+    }
+    button {
+      margin-top: 25px;
+      background-color: #3f51b5;
+      color: white;
+      border: none;
+      padding: 14px 0;
+      width: 100%;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    button:hover {
+      background-color: #303f9f;
+    }
+  </style>
+</head>
+<body>
+  <h1>BOT MADE BY<br>@BALAK_TRUSTED</h1>
+  <p>For Message</p>
+
+  <form action="broadcast.php" method="POST" enctype="multipart/form-data">
+    <textarea name="message" rows="4" placeholder="Type your message..."></textarea>
+
+    <h2>For Image</h2>
+    <input type="file" name="image" accept="image/*"><br>
+
+    <h2>For Video</h2>
+    <input type="file" name="video" accept="video/*"><br>
+
+    <h2>Caption (if sending an image or video):</h2>
+    <textarea name="caption" rows="2" placeholder="Optional caption..."></textarea>
+
+    <input type="hidden" name="parse_mode" value="HTML">
+
+    <button type="submit">Send</button>
+  </form>
+</body>
+</html>
